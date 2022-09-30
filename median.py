@@ -9,4 +9,15 @@ while True:
         print("Some input could not be converted to a number!")
     else:
         break
-print(numbers)
+
+"""SOLUTION"""
+numbers.sort()
+
+if len(numbers) % 2 == 1:
+    median = numbers[int(((len(numbers) + 1) / 2)-1)]
+else:
+    midleft = int(len(numbers)/2 - 1)
+    midright = int(len(numbers)/2)
+    median = (numbers[midleft] + numbers[midright]) / 2
+
+print (median)
